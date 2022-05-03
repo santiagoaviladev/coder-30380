@@ -1,11 +1,9 @@
-//Scope Global 
 
+  
+  const suma = function (a,b) {
+      return a+b
+  }
 
+  const resultado = suma(3,4);
 
-
-// Scope local
-
-
-
-
-//let y const vs var
+  console.log(resultado);

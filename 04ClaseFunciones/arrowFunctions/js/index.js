@@ -1,11 +1,8 @@
-//Scope Global 
 
 
+const suma = (a,b) => a+b;
 
 
-// Scope local
+const resultado = suma(3,4);
 
-
-
-
-//let y const vs var
+console.log(resultado);
