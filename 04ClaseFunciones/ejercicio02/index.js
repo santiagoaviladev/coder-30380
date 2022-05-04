@@ -29,3 +29,63 @@
     *** DEBE USAR FUNCIONES PARA REALIZAR EL EJERCICIO ***
 
  */
+
+    let opcion = mostrarMenu();
+    let dineroIngresado = 0;
+    if(opcion!=3)
+    {
+      venderProducto(opcion);
+    }
+    else
+    {
+       alert("GRACIAS");
+    }
+   
+
+    function mostrarMenu()
+    {
+       return prompt(`Seleccione una opcion: 
+                     1. CAFE (2 usd)
+                     2. MATE (3 usd)
+                     3. FIN`);
+      
+    }
+
+    function venderProducto(opcion)
+    {
+       if(opcion==1)
+       {
+            pedirDinero(2)
+       }
+       else if(opcion==2)
+       {
+            pedirDinero(3)
+       }
+       else 
+       {
+          alert("opcion invalida")
+       }
+    }
+       
+    function pedirDinero(numMin)
+    {
+            while(dineroIngresado<numMin)
+            {
+               let dinero = Number(prompt("Ingrese un monto"));
+               
+               if(dinero!==1 && dinero!==5 && dinero!==10)
+               {
+                  alert("monto invalido")
+               }
+               else{
+                  dineroIngresado+=dinero;
+               }
+            }
+            
+               let cambio = dineroIngresado-numMin;
+               alert("Su cambio es: " + cambio);
+               alert("Gracias");
+            
+         
+    }
+    
