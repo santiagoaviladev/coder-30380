@@ -53,6 +53,29 @@
 
     function venderProducto(opcion)
     {
+       switch (opcion) 
+       {
+          
+
+         case "1":
+         {
+               pedirDinero(2)
+               break;
+         }
+         case "2":
+         {
+               pedirDinero(3)
+               break;
+         }
+         default:
+         {
+            alert("opcion invalida")
+            break;
+         }
+             
+       }
+
+    /*
        if(opcion==1)
        {
             pedirDinero(2)
@@ -64,7 +87,7 @@
        else 
        {
           alert("opcion invalida")
-       }
+       } */
     }
        
     function pedirDinero(numMin)
