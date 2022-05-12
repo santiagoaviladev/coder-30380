@@ -1,0 +1,11 @@
+
+ //numeros
+
+
+ //cadenas
+
+
+ //booleanos 
+
+
+ //mixto
