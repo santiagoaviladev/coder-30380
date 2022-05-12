@@ -13,25 +13,44 @@ console.log(misNumeros.length);
 misNumeros.push(21);
 console.log(misNumeros);
 
-
-
-
 //unshift
+misNumeros.unshift("Al principio");
+console.log(misNumeros);
 
 //pop
+misNumeros.pop();
+console.log(misNumeros);
 
 //shift
+misNumeros.shift();
+console.log(misNumeros);
 
 //splice
+misNumeros.splice(2,3);
+console.log(misNumeros);
 
 //join
+const perros = ["tito", "machita", "morgan", "tuca"]
+let cadenaPerros = perros.join(",");
+console.log(cadenaPerros);
 
 //concat
+const gatos = ["michi", "gatito", "porro"];
+const mascotas = gatos.concat(perros);
+console.log(mascotas);
 
 //slice
+const copia = mascotas.slice(2,6);
+console.log(copia);
 
 //indexOf
+const index = mascotas.indexOf("machita");
+console.log(index);
 
 //includes
+const esta = mascotas.includes("pepito");
+console.log(esta);
 
 //reverse
+mascotas.reverse();
+console.log(mascotas);

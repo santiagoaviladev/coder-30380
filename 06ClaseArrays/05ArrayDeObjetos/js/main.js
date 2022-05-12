@@ -1,7 +1,34 @@
-// Haga un sistema CRUD para administrar usuarios. 
-// Un usuario debe tener un id, nombre y apellido. 
-// El sistema debe permitir: 
-// Agregar un usuario
-// Eliminar un usuario dado su id
-// Buscar un usuario, dado su nombre 
-// Editar el nombre y apellido de un usuario, dado su id
+ 
+  const productos = [
+    {
+        id:1,
+        nombre:"leche",
+        precio:2000,
+    },
+    {
+        id:2,
+        nombre:"cerveza",
+        precio:3000,
+
+    },
+    {
+        id:3,
+        nombre:"pan",
+        precio:200,
+
+    }
+
+  ]
+
+  console.log(productos);
+
+  for(let i = 0;i<productos.length;i++)
+  {
+      console.log(productos[i]);
+  }
+
+  console.log("Recorrer con OF")
+  for(let producto of productos)
+  {
+      console.log(producto.nombre);
+  }
