@@ -25,7 +25,7 @@
   let multiplicacion = 1;
   for(let i=0;i<miArray.length;i++)
   {
-    //multiplicacion=multiplicacion*miArray[i];
+    //multiplicacion=multiplicacion*
     multiplicacion*=miArray[i];
   }
   console.log("MUL", multiplicacion);
