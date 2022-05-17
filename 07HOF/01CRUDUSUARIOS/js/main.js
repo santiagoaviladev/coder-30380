@@ -22,7 +22,12 @@
      }
  }
 
- const usuarios = [];
+ const usuario1 = new Usuario(1, "Ezequiel", "Natale");
+ const usuario2 = new Usuario(2, "Roman", "Stoleru");
+ const usuario3 = new Usuario(3, "Fernando", "Benitez");
+
+ const usuarios = [usuario1,usuario2,usuario3];
+ console.log("INICIAL:", usuarios);
 
  mostrarMenu();
 
@@ -31,24 +36,30 @@
  {
     let opcion = 0;
     
-    while(opcion!==5)
+    while(opcion!==10)
     {
         opcion = Number( prompt(`Seleccione una acción:
                             1. Agregar Usuario
                             2. Eliminar Usuario
                             3. Modificar Usuario
                             4. Listar usuarios
-                            5. Salir`));
+                            10. Salir`));
 
     switch(opcion)
     {
         case 1:
-            {
-                agregarUsuario();
-                break;
-            }
+        {
+            agregarUsuario();
+            break;
+        }
+        case 4:
+        {
+            listarUsuarios();
+            break;
+        }
         default:{
             alert("opcion inválida");
+            break;
         }
        
     }
@@ -58,7 +69,7 @@
 
  function agregarUsuario()
  {      
-    let id=1;
+     let id=1;
      if(usuarios.length>0)
      {
         id=usuarios[usuarios.length-1].id+1;
@@ -72,4 +83,19 @@
  }
 
 
- console.log(usuarios);
+ function listarUsuarios()
+ {
+    console.log("LISTAR USUARIOS")
+    
+    usuarios.forEach(
+        (usuario)=>{
+            
+            console.log(usuario.id+" "+usuario.nombre+" "+usuario.apellido);
+
+        }
+    );
+
+
+ }
+
+ 
