@@ -73,3 +73,27 @@
 
 
  console.log(usuarios);
+
+  /*
+    usuarios = [];
+
+    usuario = [{id:1,pepito,perez}]
+    usuarios.length // 1
+    usuarios.length-1 // 0
+    usuarios[0] => {id:1,pepito,perez}
+    usuarios[0].id // => 1
+    usuarios[0].id +1 // 2
+    usuario = {id:2,fulano,gomez}
+    usuarios = [{id:1,pepito,perez}, {id:2,fulano,gomez},
+    , {id:3,fulano,gomez},
+, {id:4,fulano,gomez},
+, {id:6,fulano,gomez},
+, {id:10,fulano,gomez},
+, {id:12,fulano,gomez},
+, {id:20,fulano,gomez}]
+
+{id:21,fulano,gomez}
+  
+  
+  
+  */
