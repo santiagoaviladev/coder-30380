@@ -11,8 +11,6 @@
   }
 
   
-  
-  
   document.body.appendChild(nodoUL);
 
   console.log(document);
