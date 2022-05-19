@@ -8,7 +8,7 @@
 
  const spans = document.getElementsByClassName("mySpan");
 
- let index=0;
+ let index = 0;
  for(let span of spans)
  {
      span.innerText= mascotas[index];
