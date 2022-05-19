@@ -1,6 +1,16 @@
 
  const nodo = document.getElementById("miContenido");
- console.log(nodo);
+ const nombre = prompt("Ingrese su nombre");
+  
+ nodo.innerHTML = `<b>¡BIENVENIDO, ${nombre}!</b>`;
 
-  nodo.innerHTML = "<b>¡BIENVENIDOS!</b>";
+ const mascotas = ["perico", "morgan", "jose", "sarna", "vito", "roma"];
 
+ const spans = document.getElementsByClassName("mySpan");
+
+ let index=0;
+ for(let span of spans)
+ {
+     span.innerText= mascotas[index];
+     index++;
+ }
