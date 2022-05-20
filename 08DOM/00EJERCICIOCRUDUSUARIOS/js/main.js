@@ -32,6 +32,7 @@ const usuario6 = new Usuario(6, "Fabian", "Gutman");
 const usuarios = [usuario1,usuario2,usuario3, usuario4, usuario5, usuario6];
 console.log("INICIAL:", usuarios);
 
+inicializarAplicacion();
 mostrarMenu();
 
 
@@ -108,17 +109,22 @@ function agregarUsuario()
 
 function listarUsuarios()
 {
-   console.log("LISTAR USUARIOS")
+   let miLista = document.querySelector("#listaUsuarios");
+   if(!miLista)
+   {
+     miLista = document.createElement("ul");
+     miLista.setAttribute("id", "listaUsuarios");
+   }
+   miLista.innerHTML="";
+
    
-   usuarios.forEach(
-       (usuario)=>{
-           
-           console.log(usuario.id+" "+usuario.nombre+" "+usuario.apellido);
+   usuarios.forEach((usuario)=>{
+       const nodoli = document.createElement("li");
+       nodoli.innerHTML=`${usuario.nombre} ${usuario.apellido}`;
+       miLista.appendChild(nodoli);
+   });
 
-       }
-   );
-
-
+   document.body.appendChild(miLista);
 }
 
 function eliminarUsuario(){
@@ -189,5 +195,25 @@ function listarNombreMasApellido()
 
    console.log("MAP:");
    console.log(nombresYApellidos);
+
+}
+
+
+
+function inicializarAplicacion()
+{
+    const tituloH1 = document.createElement("h1");
+    tituloH1.innerHTML="SISTEMA DE USUARIOS";
+
+    tituloH1.setAttribute("style","color:blue;text-align:center");
+    tituloH1.classList.add("miTitulo");
+    tituloH1.classList.add("miTitulo2");
+
+    document.body.appendChild(tituloH1);
+
+    const subtitulo = document.createElement("p");
+    subtitulo.innerText="Listado de usuarios:";
+
+    document.body.appendChild(subtitulo);
 
 }
