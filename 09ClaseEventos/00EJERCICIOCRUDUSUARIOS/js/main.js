@@ -126,15 +126,7 @@ function eliminarUsuario(){
 
 }
 
-function buscarUsuario()
-{
-   let nombre = prompt("Ingresa el nombre que quires buscar");
 
-   let encontrados = usuarios.filter((usuario)=>usuario.nombre.toLowerCase().indexOf(nombre.toLocaleLowerCase())!==-1);
-
-   console.log("BUCAR USUARIOS:", encontrados);
-
-}
 
 
 function modificarUsuario()

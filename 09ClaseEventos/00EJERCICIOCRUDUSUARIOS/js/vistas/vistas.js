@@ -27,17 +27,25 @@ function crearMenu()
      if(opcion === "Listar Usuarios")
      {
          boton.addEventListener("click", ()=>{
-             listarUsuarios();
+             listarUsuarios(usuarios);
          })
      }
      else if(opcion === "Agregar Usuario")
      {
         boton.addEventListener("click", ()=>{
             agregarUsuario();
-            listarUsuarios();
+            listarUsuarios(usuarios);
         })
      }
+     else if(opcion==="Buscar Usuario")
+     {
+        boton.addEventListener("click", ()=>{
+            let filtrados = buscarUsuario();
+           
+            listarUsuarios(filtrados);
 
+        })
+     }
      
      document.body.appendChild(boton);
      });
@@ -49,7 +57,7 @@ function crearMenu()
 /*
     Muestra el listado de usuarios del sistema
 */
-function listarUsuarios()
+function listarUsuarios(listaUsuarios)
 {
    let miLista = document.querySelector("#listaUsuarios");
    if(!miLista)
@@ -79,7 +87,7 @@ function listarUsuarios()
 
    miLista.appendChild(encabezado)
    
-   usuarios.forEach((usuario)=>{
+   listaUsuarios.forEach((usuario)=>{
        const nodotr = document.createElement("tr");
        let nodotd = document.createElement("td");
        nodotd.innerHTML=`${usuario.nombre}`;
@@ -117,4 +125,16 @@ function agregarUsuario()
     let usuario = new Usuario(id, nombre, apellido);
 
     usuarios.push(usuario);
+}
+
+function buscarUsuario()
+{
+   let nombre = prompt("Ingresa el nombre que quires buscar");
+
+   let encontrados = usuarios.filter((usuario)=>usuario.nombre.toLowerCase().indexOf(nombre.toLocaleLowerCase())!==-1);
+
+   console.table(encontrados);
+
+   return encontrados;
+
 }
