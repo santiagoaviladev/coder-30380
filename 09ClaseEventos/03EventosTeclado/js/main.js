@@ -1,31 +1,24 @@
 
-    class Usuario{
-        constructor(nombre, apellido, rol)
-        {
-            this.nombre=nombre;
-            this.apellido=apellido;
-            this.rol=rol;
-        }
-    }
 
-   
+ const input2 = document.getElementById("input2");
+ const btn = document.getElementById("miBoton1");
+ input2.onchange= ()=> btn.disabled=false;
+ 
+ btn.addEventListener("click", ()=>{
+     validarFormulario();
+ });
 
-   function crearUsuario()
-   {
-       let nombre = prompt("Ingrese nombre");
-       let apellido = prompt("Ingrese apellido");
-       let rol = prompt("Ingrese rol");
-       const usuario = new Usuario(nombre, apellido, rol);
-       return usuario;
-   }
+ function validarFormulario()
+ {
+     const nombre = document.getElementById("input1");
+     const apellido = document.getElementById("input2");
 
-   function mostrarUsuario(usuario)
-   {
-        const nodo = document.querySelector("#miContenido");
-        nodo.innerHTML=`<b>Nombre:</b> ${usuario.nombre}<br/>
-                        <b>Apellido:</b> ${usuario.apellido}<br/>
-                        <span>Rol:</span> ${usuario.rol}<br/>`;
-   }
-
-   const usuario = crearUsuario();
-   mostrarUsuario(usuario);
+     if(nombre.value.trim()!=="" && apellido.value.trim()!=="")
+     {
+         alert("Datos Correctos")
+     }
+     else
+     {
+         alert("DATOS INVÁLIDOS")
+     }
+ }
