@@ -1,31 +1,12 @@
+// addEventListener
 
-    class Usuario{
-        constructor(nombre, apellido, rol)
-        {
-            this.nombre=nombre;
-            this.apellido=apellido;
-            this.rol=rol;
-        }
-    }
+  const boton1 = document.getElementById("miBoton1");
+  boton1.addEventListener("click", ()=>{
+      alert("ESTE ES EL CLICK DEL PRIMER BOTÓN");
+  });
 
-   
-
-   function crearUsuario()
-   {
-       let nombre = prompt("Ingrese nombre");
-       let apellido = prompt("Ingrese apellido");
-       let rol = prompt("Ingrese rol");
-       const usuario = new Usuario(nombre, apellido, rol);
-       return usuario;
-   }
-
-   function mostrarUsuario(usuario)
-   {
-        const nodo = document.querySelector("#miContenido");
-        nodo.innerHTML=`<b>Nombre:</b> ${usuario.nombre}<br/>
-                        <b>Apellido:</b> ${usuario.apellido}<br/>
-                        <span>Rol:</span> ${usuario.rol}<br/>`;
-   }
-
-   const usuario = crearUsuario();
-   mostrarUsuario(usuario);
+  const boton2 = document.getElementById("miBoton2");
+  boton2.onclick = ()=>{
+      let nombre = prompt("Ingrese su nombre");
+      alert(`Hola, ${nombre}`);
+  }
