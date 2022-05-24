@@ -19,7 +19,22 @@ function crearTitulo()
 }
 function crearMenu()
 {
-         
+     let opciones = ["Listar Usuarios", "Agregar Usuario", "Buscar Usuario"]
+     opciones.forEach((opcion)=>{
+     const boton = document.createElement("button");
+
+     if(opcion === "Listar Usuarios")
+     {
+         boton.addEventListener("click", ()=>{
+             listarUsuarios();
+         })
+     }
+
+     boton.innerHTML=opcion;
+     document.body.appendChild(boton);
+     });
+     
+     
      
 
 }
