@@ -1,31 +1,11 @@
+ 
+  const boton1 = document.getElementById("miBoton1");
 
-    class Usuario{
-        constructor(nombre, apellido, rol)
-        {
-            this.nombre=nombre;
-            this.apellido=apellido;
-            this.rol=rol;
-        }
-    }
+  boton1.addEventListener("mouseover", ()=>{
+      boton1.innerHTML="HOLIS";
+  });
 
-   
-
-   function crearUsuario()
-   {
-       let nombre = prompt("Ingrese nombre");
-       let apellido = prompt("Ingrese apellido");
-       let rol = prompt("Ingrese rol");
-       const usuario = new Usuario(nombre, apellido, rol);
-       return usuario;
-   }
-
-   function mostrarUsuario(usuario)
-   {
-        const nodo = document.querySelector("#miContenido");
-        nodo.innerHTML=`<b>Nombre:</b> ${usuario.nombre}<br/>
-                        <b>Apellido:</b> ${usuario.apellido}<br/>
-                        <span>Rol:</span> ${usuario.rol}<br/>`;
-   }
-
-   const usuario = crearUsuario();
-   mostrarUsuario(usuario);
+  boton1.addEventListener("mouseout", ()=>{
+    document.body.setAttribute("style", "background-color:red");
+    boton1.innerHTML="TRY ME";
+});

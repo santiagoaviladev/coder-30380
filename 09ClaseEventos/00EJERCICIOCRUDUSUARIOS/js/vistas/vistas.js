@@ -22,6 +22,7 @@ function crearMenu()
      let opciones = ["Listar Usuarios", "Agregar Usuario", "Buscar Usuario"]
      opciones.forEach((opcion)=>{
      const boton = document.createElement("button");
+     boton.innerHTML=opcion;
 
      if(opcion === "Listar Usuarios")
      {
@@ -29,8 +30,15 @@ function crearMenu()
              listarUsuarios();
          })
      }
+     else if(opcion === "Agregar Usuario")
+     {
+        boton.addEventListener("click", ()=>{
+            agregarUsuario();
+            listarUsuarios();
+        })
+     }
 
-     boton.innerHTML=opcion;
+     
      document.body.appendChild(boton);
      });
      
@@ -93,4 +101,20 @@ function listarUsuarios()
    });
 
    document.body.appendChild(miLista);
+}
+
+
+function agregarUsuario()
+{      
+    let id=1;
+    if(usuarios.length>0)
+    {
+       id=usuarios[usuarios.length-1].id+1;
+    }
+    
+    let nombre=prompt("ingrese un nombre");
+    let apellido = prompt("ingrese un apellido");
+    let usuario = new Usuario(id, nombre, apellido);
+
+    usuarios.push(usuario);
 }
