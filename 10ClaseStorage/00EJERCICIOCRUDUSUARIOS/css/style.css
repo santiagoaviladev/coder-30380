@@ -1,0 +1,54 @@
+body{
+    border:1px solid gray;
+    border-radius: 20px;
+    margin:2%;
+    padding:2%;
+}
+h1{
+    color:blue;
+    text-align: center;
+}
+h3 {
+    border-bottom:1px solid aquamarine;
+    padding:1%;
+}
+
+button{
+    background-color: blue;
+    width:200px;
+    height: 50px;
+    color:white;
+    font-weight: bold;
+    margin-left: 2%;
+    border-radius: 20px;
+    border:0;
+    cursor: pointer;
+}
+button:hover, button.active{
+    color:blue;
+    background-color: white;
+    border:1px solid blue;
+}
+
+table{
+    margin-top:20px;
+    margin-left: 2%;
+    border:1px solid blue;
+    width:650px;
+    border-radius: 20px;
+}
+tr:nth-child(even){
+    background-color: cornflowerblue;
+    color:white;
+}
+
+th{
+    padding: 3%;
+    padding-bottom:1%;
+    border-bottom:1px solid blue;
+}
+
+td{
+    padding: 3%;
+    padding-bottom:1%;
+}
