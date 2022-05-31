@@ -2,9 +2,13 @@ h1{
     text-align: center;
 }
 
-div .mainContainer{
+.mainContainer{
     display: flex;
+    flex-wrap: wrap;
     padding: 2%;
+    align-items: center;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 div .card{
@@ -13,7 +17,9 @@ div .card{
     border-radius: 20px;
     padding: 2%;
     margin-left: 2%;
+    margin-top:2%;
     text-align: center;
+    width:18%;
 
 }
 
