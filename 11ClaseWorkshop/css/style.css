@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+
+div .mainContainer{
+    display: flex;
+    padding: 2%;
+}
+
+div .card{
+
+    border:1px solid yellow;
+    border-radius: 20px;
+    padding: 2%;
+    margin-left: 2%;
+    text-align: center;
+
+}
+
+div .card img{
+    width:90%;
+}
+
+div .cardReverse{
+
+    background-color: yellow;
+    color:black;
+    border: 1px solid black;
+}
