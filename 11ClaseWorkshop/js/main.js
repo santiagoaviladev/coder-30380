@@ -79,7 +79,8 @@
                 ${personaje.name}
             </div>
             `;
-        nodo.addEventListener("click", ()=>{
+        
+        nodo.addEventListener("mousedown", ()=>{
                 mostrarReverso(nodo, personaje);
             })
   }
@@ -90,9 +91,9 @@
                       <div>${personaje.otherInfo.gender}</div>
                       <div>${personaje.otherInfo.status}</div>
                       <div>${personaje.otherInfo.locationName}</div>`;
-    
-       nodo.addEventListener("mouseover", ()=>{
+      
+      nodo.addEventListener("mouseup", ()=>{
                         mostrarFrente(nodo, personaje);
-                    })
+                    });
     
   }
