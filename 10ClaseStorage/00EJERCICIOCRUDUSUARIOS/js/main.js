@@ -5,7 +5,6 @@
 // Eliminar un usuario dado su id
 // Buscar un usuario, dado su nombre 
 // Editar el nombre y apellido de un usuario, dado su id
-
  // Mostar un menu
  // Ingresar Datos 
  // Pedir id del que quiere eliminar
@@ -22,7 +21,17 @@ const usuario4 = new Usuario(4, "Jorge", "Dáttoli");
 const usuario5 = new Usuario(5, "Ivana", "Villanueva");
 const usuario6 = new Usuario(6, "Fabian", "Gutman");
 
-const usuarios = [usuario1,usuario2,usuario3, usuario4, usuario5, usuario6];
+let usuarios = [];
+ 
+ if(localStorage.getItem("usuarios"))
+ {
+     usuarios = JSON.parse(localStorage.getItem("usuarios"));
+ }
+ else
+ {
+    usuarios = [usuario1,usuario2,usuario3, usuario4, usuario5, usuario6];
+ }
+
 console.log("INICIAL:", usuarios);
 
 inicializarAplicacion();
@@ -83,22 +92,6 @@ function mostrarMenu()
 
    }
 }
-
-function agregarUsuario()
-{      
-    let id=1;
-    if(usuarios.length>0)
-    {
-       id=usuarios[usuarios.length-1].id+1;
-    }
-    
-    let nombre=prompt("ingrese un nombre");
-    let apellido = prompt("ingrese un apellido");
-    let usuario = new Usuario(id, nombre, apellido);
-
-    usuarios.push(usuario);
-}
-
 
 
 

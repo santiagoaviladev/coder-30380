@@ -4,7 +4,8 @@
     Agrega Subtítulo
 */
 function inicializarAplicacion()
-{
+{ 
+
     crearTitulo(); 
     crearMenu();
     
@@ -75,6 +76,11 @@ function listarUsuarios(listaUsuarios)
 
    const tdApellido = document.createElement("th");
    tdApellido.innerHTML="Apellido";
+   tdApellido.setAttribute("style","cursor:pointer");
+
+   tdApellido.addEventListener("click", ()=>ordenarUsuarios());
+
+
    encabezado.appendChild(tdApellido);
 
    const tdCumpleanos = document.createElement("th");
@@ -125,6 +131,8 @@ function agregarUsuario()
     let usuario = new Usuario(id, nombre, apellido);
 
     usuarios.push(usuario);
+    console.log("ALMACENADO");
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 
 function buscarUsuario()
@@ -138,3 +146,24 @@ function buscarUsuario()
    return encontrados;
 
 }
+
+function ordenarUsuarios()
+{
+    let usuariosParaOrdenar = {...usuarios};
+
+    usuariosParaOrdenar.sort((a,b)=>{
+
+        if(a.apellido<b.apellido)
+        {
+            return -1;
+        }
+        else
+        {
+            return 1;
+        }
+     })   
+    listarUsuarios(usuariosParaOrdenar);
+
+}
+
+ 
