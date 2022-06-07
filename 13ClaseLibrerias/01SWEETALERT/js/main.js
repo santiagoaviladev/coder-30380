@@ -72,7 +72,10 @@ function alertConEventos()
         }).then((result)=>{
             if(result.isConfirmed)
             {
-                alert("CONFIRMADO");
+                let nombre = prompt("Ingrese su nombre");
+                const nodo = document.createElement("div");
+                nodo.innerText=nombre;
+                document.body.appendChild(nodo);
             }
             else
             {
