@@ -22,6 +22,7 @@ let interval = setInterval(()=>{
     if(contador===0)
     {
         clearInterval(interval);
+        msg.innerHTML="";
         document.body.setAttribute("style", "background-color: red")
     }
 

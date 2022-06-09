@@ -1,7 +1,25 @@
-//setTimeout
 
 
-const msg = document.getElementById("msg");
-msg.innerHTML="MENSAJE PARA EL USUARIO";
-msg.setAttribute("style", "width:200px;margin-top:10%;margin-left:auto;margin-right:auto;border:1px solid red;border-radius:20px;padding:5%")
 
+  const miPromesa = (res) => new Promise((resolve, reject)=>{
+
+    if(res===true)
+    {
+        resolve("200")
+    }
+    else
+    {
+        reject("ERROR INDUCIDO POR MI: FALLÓ")
+    }
+
+})
+
+ 
+
+  let resultado = prompt("Indique qué quiere que pase")
+  let myRes = resultado === "1" ? true : false;
+
+  miPromesa(myRes)
+  .then((response)=>console.log(response))
+  .catch((error)=>console.log(error))
+  .finally(()=>console.log("FINALIZAMOS"));
