@@ -41,6 +41,10 @@ function cargarTeclado()
                 acc*=i;
             }
 
+            Toastify({
+                text: `Resultado: ${acc}`, 
+                duration: 3000,
+             }).showToast();
             
 
 
@@ -55,10 +59,13 @@ function cargarTeclado()
 
 
 
+
     const divMul = document.createElement("div");
     divMul.setAttribute("class", "operacion");
     divMul.innerHTML=`*`;
     nodo.appendChild(divMul);
+
+
   
     
 }
