@@ -4,7 +4,10 @@ const mainContainer = document.getElementById("appContainer");
 
 function programarMenuInicial(){
 
-    programarBotonAdmin();
-    programarBotonPreview();
+   // programarBotonAdmin();
+   // programarBotonPreview();
 
 }
+
+
+
